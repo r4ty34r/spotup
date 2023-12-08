@@ -13,11 +13,12 @@ struct lab1_assignmentApp: App {
     init() {
         FirebaseApp.configure()
     }
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(AuthViewModel())
+                .environmentObject(AuthViewModel()) // Instantiate AuthViewModel here
         }
     }
 }
+

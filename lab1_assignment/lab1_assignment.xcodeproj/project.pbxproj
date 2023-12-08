@@ -174,8 +174,8 @@
 		D7F5DB582B20B67500FCB202 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D7F5DB6E2B223C9300FCB202 /* User.swift */,
 				D7F5DB832B22D2FE00FCB202 /* GoogleService-Info.plist */,
+				D7F5DB6E2B223C9300FCB202 /* User.swift */,
 				D7F5DB6C2B212AEB00FCB202 /* Assets.xcassets */,
 				D7F5DB5F2B21177300FCB202 /* Preview Content */,
 			);

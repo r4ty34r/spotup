@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Firebase
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: AuthViewModel

@@ -35,7 +35,7 @@ class AuthViewModel: ObservableObject{
     
     func createUser(withEmail email: String, password: String, fullname: String) async throws {
         do {
-            let result = try await Auth.auth().createUser(withEmail: "email", password: "password")
+            let result = try await Auth.auth().createUser(withEmail: email, password: password)
             self.userSession = result.user
             let user = User(id: result.user.uid, fullname: fullname, email: email)
             let encodedUser = try Firestore.Encoder().encode(user)
@@ -60,11 +60,10 @@ class AuthViewModel: ObservableObject{
     func deleteAccount () {
         
     }
-
+    
     func fetchUser() async {
-        guard let uid = Auth.auth().currentUser?.uid else {return}
-        
-        guard let snapshot = try? await Firestore.firestore().collection("user").document(uid).getDocument() else {return}
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        guard let snapshot = try? await Firestore.firestore().collection("users").document(uid).getDocument() else { return }
         self.currentUser = try? snapshot.data(as: User.self)
     }
 }

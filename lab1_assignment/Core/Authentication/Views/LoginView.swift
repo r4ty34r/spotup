@@ -90,6 +90,7 @@ extension LoginView: AuthenticationFormProtocol {
         && email.contains("@")
         && !password.isEmpty
         && password.count > 5
+        
     }
 }
 
