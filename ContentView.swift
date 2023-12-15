@@ -14,9 +14,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             //destination is to the map class wrapper 
-            NavigationLink(destination: MapViewController()){
+            NavigationLink(destination: ViewControllerWrapper()){
                 VStack {
-                    MapViewController()
+                    
                     Image(systemName: "globe")
                         .imageScale(.large)
                         .foregroundStyle(.tint)
